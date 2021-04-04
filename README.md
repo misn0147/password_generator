@@ -1,10 +1,10 @@
 # Password Generator Starter Code
-Create variables containing different data types used to create a password
+Deployed applicatio: https://misn0147.github.io/password_generator/
 
-Write conditional statements to add in password criteria that the user has selected
+This is a website that uses HTML, CSS, and Javascript to generate a custom password for the user based on criteria that they provide.
 
-Write for loops to create a password from the variables you created
+![image](https://user-images.githubusercontent.com/79875711/113513461-873f3480-952f-11eb-9ced-bc5663a25f30.png)
 
-Use functions to display the password to the user
+Upon opening the webste, the user is asked to enter a password length, and then decides if they'd like their password to include uppcase, lowercase, numeric, and symbol characters. Based on their responses, the window will display their random password that matches thier selected criteria. 
 
-Use GitHub Pages to publish the page to the web
+![image](https://user-images.githubusercontent.com/79875711/113513480-9b833180-952f-11eb-971b-63bb264b9a20.png)
