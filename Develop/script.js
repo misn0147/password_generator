@@ -1,32 +1,42 @@
 // Assignment code here
-function genCriteria() {
-  //password length
-  var passwordLength = window.prompt("How many characters would you like your password? Please enter a number between 8 and 128."); {
-    
-  if (passwordLength === "" || passwordLength === null || passwordLength <8 || passwordLength > 128) {
-    window.alert("Please enter a number between 8 and 128.");
-    return genCriteria();
-  }
-  else {
-    window.confirm("Your password will be " + passwordLength + " characters long.");
-    break;
-  }
+const key_strings = {
+  lowercase: 'abcdefghijklmnopqrstuvwxyz',
+  uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+  number: '0123456789',
+  symbol: "!#$%&'()*+,-./:;<=>?@[]^_`{|}~",
 };
 
-    //lowercase/uppercase
-    var lowercase = window.prompt("Would you like to include both lowercase and uppercase letters? Please enter 'yes' or 'no'."); {
-    lowercase = lowercase.toLowerCase
-    if (lowercase === "yes") {
-      window.alert("Your password will contain both lowercase and uppercase letters.");
-    }
-    else (lowercase === "no") {
-      window.prompt("Would you like only lowercase letters? Please enter 'yes' or 'no'.");
-      break;
-    }
+function generatePassword() {
+  var passwordCharSet = "";
+
+  var length = window.prompt("Enter a number from 8 to 128 for password length.");
+
+  var lowercase = window.confirm("Would you like to use lowercase letters?");
+  if (lowercase) {
+    passwordCharSet += key_strings.lowercase;
+  };
+
+  var uppercase = window.confirm("Would you like to use uppercase letters?");
+  if (uppercase) {
+    passwordCharSet += key_strings.uppercase;
+  };
+
+  var symbols = window.confirm("Would you like to use symbols?");
+  if (symbols) {
+    passwordCharSet += key_strings.symbol;
+  };
+
+  var numbers = window.confirm("Would you like to use numbers?");
+  if (numbers) {
+    passwordCharSet += key_strings.number;
+  };
+  var password = "";
+  for (let i = 0; i < length; i++) {
+    password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
   }
+  return password;
 }
-};
-
+writePassword();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
