@@ -1,4 +1,6 @@
 # Password Generator Starter Code
+Deployed applicatio: https://misn0147.github.io/password_generator/
+
 This is a website that uses HTML, CSS, and Javascript to generate a custom password for the user based on criteria that they provide.
 
 ![image](https://user-images.githubusercontent.com/79875711/113513461-873f3480-952f-11eb-9ced-bc5663a25f30.png)
