@@ -1,9 +1,9 @@
 // Assignment code here
-const key_strings = {
+const available_characters = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   number: '0123456789',
-  symbol: "!#$%&'()*+,-./:;<=>?@[]^_`{|}~",
+  symbol: "!@#$%^&*()_+};:?-><",
 };
 
 function generatePassword() {
@@ -11,25 +11,26 @@ function generatePassword() {
 
   var length = window.prompt("Enter a number from 8 to 128 for password length.");
 
-  var lowercase = window.confirm("Would you like to use lowercase letters?");
+  var lowercase = window.confirm("Would you like to use lowercase letters? If yes press 'ok', if no press 'cancel'.");
   if (lowercase) {
-    passwordCharSet += key_strings.lowercase;
+    passwordCharSet += available_characters.lowercase;
   };
 
-  var uppercase = window.confirm("Would you like to use uppercase letters?");
+  var uppercase = window.confirm("Would you like to use uppercase letters? If yes press 'ok', if no press 'cancel'.");
   if (uppercase) {
-    passwordCharSet += key_strings.uppercase;
+    passwordCharSet += available_characters.uppercase;
   };
 
-  var symbols = window.confirm("Would you like to use symbols?");
+  var symbols = window.confirm("Would you like to use symbols? If yes press 'ok', if no press 'cancel'.");
   if (symbols) {
-    passwordCharSet += key_strings.symbol;
+    passwordCharSet += available_characters.symbol;
   };
 
-  var numbers = window.confirm("Would you like to use numbers?");
+  var numbers = window.confirm("Would you like to use numbers? If yes press 'ok', if no press 'cancel'.");
   if (numbers) {
-    passwordCharSet += key_strings.number;
+    passwordCharSet += available_characters.number;
   };
+  
   var password = "";
   for (let i = 0; i < length; i++) {
     password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
