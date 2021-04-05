@@ -32,7 +32,7 @@ function generatePassword() {
   };
   
   var password = "";
-  for (let i = 0; i < length; i++) {
+  for (var i = 0; i < length; i++) {
     password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
   }
   return password;
