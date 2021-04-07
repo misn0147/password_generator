@@ -11,22 +11,22 @@ function generatePassword() {
 
   var length = window.prompt("Enter a number from 8 to 128 for password length.");
 
-  var lowercase = window.confirm("Would you like to use lowercase letters? If yes press 'ok', if no press 'cancel'.");
+  var lowercase = window.confirm("Would you like password to include lowercase letters? If yes press 'ok', if no press 'cancel'.");
   if (lowercase) {
     passwordCharSet += available_characters.lowercase;
   };
 
-  var uppercase = window.confirm("Would you like to use uppercase letters? If yes press 'ok', if no press 'cancel'.");
+  var uppercase = window.confirm("Would you like password to include uppercase letters? If yes press 'ok', if no press 'cancel'.");
   if (uppercase) {
     passwordCharSet += available_characters.uppercase;
   };
 
-  var symbols = window.confirm("Would you like to use symbols? If yes press 'ok', if no press 'cancel'.");
+  var symbols = window.confirm("Would you like password to include symbols? If yes press 'ok', if no press 'cancel'.");
   if (symbols) {
     passwordCharSet += available_characters.symbol;
   };
 
-  var numbers = window.confirm("Would you like to use numbers? If yes press 'ok', if no press 'cancel'.");
+  var numbers = window.confirm("Would you like password to include numbers? If yes press 'ok', if no press 'cancel'.");
   if (numbers) {
     passwordCharSet += available_characters.number;
   };
