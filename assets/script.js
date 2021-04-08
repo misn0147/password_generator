@@ -10,6 +10,14 @@ function generatePassword() {
   var passwordCharSet = "";
 
   var length = window.prompt("Enter a number from 8 to 128 for password length.");
+  if (length < 8) {
+    alert("Must be between 8 and 128.")
+    return;
+  }
+  else if (length > 128) {
+    alert("Must be between 8 and 128.")
+  return;
+  }
 
   var lowercase = window.confirm("Would you like password to include lowercase letters? If yes press 'ok', if no press 'cancel'.");
   if (lowercase) {
